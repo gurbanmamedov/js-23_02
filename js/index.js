@@ -66,39 +66,44 @@
 //также посчитать, сколько четных и нечетных. Вывести
 //статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем
 
-// let counter = 0;
-// let positiveCount = 0;
-// let negativeCount = 0;
-// let zeroCount = 0;
-// let evenCount = 0;
-// let oddsCount = 0;
-// let userNum = parseFloat(prompt("Введите число"));
 
-// while (counter < 10) {
-//   if (!isNaN(userNum)) {
-//     if (userNum > 0) {
-//       positiveCount++;
-//     } else if (userNum < 0) {
-//       negativeCount++;
-//     } else {
-//       zeroCount++;
-//     }
-//     if (userNum % 2 === 0) {
-//       evenCount++;
-//     } else {
-//       oddsCount++;
-//     }
+let counter = 0;
+let positiveCount = 0;
+let negativeCount = 0;
+let zeroCount = 0;
+let evenCount = 0;
+let oddsCount = 0;
+do {
+    let userNum = parseFloat(prompt("Введите число"));
+    if (userNum > 0) {
+        positiveCount++;
+        console.log("positive");
+    }
+    if (userNum < 0) {
+        negativeCount++;
+        console.log("negative");
+    }
+    if (userNum === 0) {
+        zeroCount++;
+        console.log("zero");
+    }
+    if (userNum % 2 === 0) {
+        evenCount++;
+        console.log("Even");
+    }
+    if (userNum % 2 !== 0) {
+        oddsCount++;
+        console.log("Odds");
+    }
+    counter++;
+} while (counter < 10);
 
-//     counter++;
-//   } else {
-//     console.log("Введите корректное число");
-//   }
-// }
-// console.log("Положительных чисел " + positiveCount);
-// console.log("Отрицательных чисел " + negativeCount);
-// console.log("Нулей: " + zeroCount);
-// console.log("Четных чисел: " + evenCount);
-// console.log("Нечетных чисел: " + oddsCount);
+console.log("Положительных чисел " + positiveCount);
+console.log("Отрицательных чисел " + negativeCount);
+console.log("Нулей: " + zeroCount);
+console.log("Четных чисел: " + evenCount);
+console.log("Нечетных чисел: " + oddsCount);
+
 
 //Зациклить калькулятор. Запросить у пользователя 2 числа
 //и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока
